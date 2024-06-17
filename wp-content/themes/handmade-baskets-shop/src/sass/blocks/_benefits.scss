@@ -1,0 +1,22 @@
+.benefits {
+    padding: clamp-calc(60px, 120px);
+}
+
+.benefits__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include tablet () {
+        grid-template-columns: repeat(2, 1fr); // 290
+        gap: clamp-calc(30px,60px);
+    }
+
+    @include mobile () {
+        grid-template-columns: 1fr;
+    }
+}
+
+.benefits__title {
+    max-width: 260px;
+}
